@@ -1,40 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chandana Srinivas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-            margin: 0;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            font-size: 2.5em;
-            color: #333;
-        }
-        p {
-            font-size: 1.2em;
-            color: #666;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chandana Srinivas Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: linear-gradient(to bottom, #e7f6fb, #ffffff);
+      color: #2c3e50;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 30px;
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .content {
+      flex: 1 1 500px;
+    }
+
+    .content h1 {
+      font-size: 48px;
+      margin: 0;
+      color: #1b4d3e;
+    }
+
+    .content h2 {
+      font-size: 28px;
+      margin-top: 10px;
+      color: #398059;
+    }
+
+    .content p {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 600px;
+    }
+
+    .button {
+      margin-top: 30px;
+    }
+
+    .button a {
+      text-decoration: none;
+      background-color: #1b4d3e;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button a:hover {
+      background-color: #14533b;
+    }
+
+    .photo {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .photo img {
+        width: 400px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 2px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+
+    /* Bottom section */
+    .bottom-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 30px;
+    }
+
+    .bottom-section h3 {
+      font-size: 32px;
+      color: #1b4d3e;
+      margin-bottom: 20px;
+    }
+
+    .bottom-section .item {
+      margin-bottom: 30px;
+    }
+
+    .bottom-section .item h4 {
+      margin: 0;
+      font-size: 24px;
+      color: #3b7a57;
+    }
+
+    .bottom-section .item p {
+      margin-top: 8px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .content, .photo {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Coming Soon</h1>
-        <p>My portfolio website is under construction. Stay tuned!</p>
+
+  <div class="container">
+    <div class="content">
+      <h1>Hello, I'm Chandana Srinivas</h1>
+      <h2>Software Engineer | Problem Solver</h2>
+      <p>
+        I'm passionate about building intelligent systems and elegant web experiences.
+        With a background in full-stack development, AI, and machine learning,
+        I transform ideas into impactful solutions.
+      </p>
+      <!-- <div class="button">
+        <a href="#">View My Work</a>
+      </div> -->
     </div>
+
+    <div class="photo">
+      <img src="photo.jpg" alt="Chandana Srinivas Photo">
+    </div>
+  </div>
+
+  <!-- <div class="bottom-section"> -->
+    <!-- <h3>Projects</h3> -->
+    <!-- <div class="item">
+      <h4>Credit Score Predictor</h4>
+      <p>Built an AI model using supervised learning and deployed using FastAPI to predict user credit scores and detect fraudulent transactions.</p>
+    </div>
+    <div class="item">
+      <h4>User Behavior Simulation</h4>
+      <p>Simulated user transaction behavior and built AI models to analyze user patterns and generate actionable insights.</p>
+    </div> -->
+
+    <!-- <h3>Experience</h3> -->
+    <!-- <div class="item">
+      <h4>Software Engineer Intern - Quadcore Innovations</h4>
+      <p>Worked on developing intelligent systems for credit scoring and fraud detection, leveraging FastAPI, scikit-learn, and cloud deployment.</p>
+    </div>
+    <div class="item">
+      <h4>Research Assistant - Visualization Literacy Projects</h4>
+      <p>Contributed to IEEE VIS and Eurographics Education projects, enhancing user studies and designing visual data literacy tools.</p>
+    </div> -->
+  <!-- </div> -->
+
 </body>
 </html>
