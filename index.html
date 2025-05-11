@@ -25,9 +25,33 @@
       align-items: center;
     }
 
+    .nav-links {
+      display: flex;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      color: #1b4d3e;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+      padding: 2px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-links a:hover {
+      color: #14533b;
+      border-bottom: 2px solid #398059;
+    }
+
     .nav-left {
       font-size: 14px;
       color: #1b4d3e;
+      display: flex;
+      align-items: center;
     }
 
     .nav-right a {
@@ -46,7 +70,7 @@
     body {
       margin: 0;
       font-family: 'Helvetica Neue', sans-serif;
-      background: linear-gradient(to bottom, #e6f4f9, #ffffff);
+      background: linear-gradient(to bottom, #f0f8ff, #ffffff);
       color: #2c3e50;
     }
 
@@ -127,23 +151,177 @@
     .bottom-section h3 {
       font-size: 32px;
       color: #1b4d3e;
-      margin-bottom: 20px;
-    }
-
-    .bottom-section .item {
       margin-bottom: 30px;
+      text-align: center;
     }
 
-    .bottom-section .item h4 {
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .project-box {
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-box h4 {
+      margin: 0 0 15px 0;
+      font-size: 22px;
+      color: #1b4d3e;
+    }
+
+    .project-box p {
       margin: 0;
-      font-size: 24px;
-      color: #3b7a57;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #2c3e50;
     }
 
-    .bottom-section .item p {
+    .skills-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 30px;
+    }
+
+    .skills-section h3 {
+      font-size: 32px;
+      color: #1b4d3e;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 30px;
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+
+    .skill-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .skill-item img {
+      width: 55px;
+      height: 55px;
+      margin-bottom: 12px;
+      object-fit: contain;
+    }
+
+    .skill-item span {
+      font-size: 15px;
+      color: #2c3e50;
+      font-weight: 500;
+    }
+
+    .education-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 30px;
+      border-top: 1px solid #e0e4ea;
+      margin-bottom: 80px;
+    }
+
+    .education-section h3 {
+      font-size: 32px;
+      color: #1b4d3e;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .education-flex {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 25px 36px;
+      margin-top: 36px;
+    }
+
+    .education-left {
+      display: flex;
+      align-items: flex-start;
+      min-width: 270px;
+      max-width: 320px;
+      border-right: 2px solid #e0e4ea;
+      padding-right: 32px;
+    }
+
+    .edu-icon {
+      width: 44px;
+      height: 44px;
+      margin-right: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .edu-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .edu-univ, .edu-courses-title {
+      color: #1b4d3e;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .edu-major {
+      color: #398059;
+    }
+
+    .edu-years {
+      font-size: 1rem;
+      color: #888;
+    }
+
+    .education-right {
+      flex: 1;
+      padding-left: 32px;
+    }
+
+    .edu-courses-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+      border-bottom: 1px solid #e0e4ea;
+      display: inline-block;
+      padding-bottom: 2px;
+    }
+
+    .edu-courses-list {
+      color: #444;
+      font-size: 1.05rem;
       margin-top: 8px;
-      font-size: 16px;
-      line-height: 1.5;
+      line-height: 1.7;
     }
 
     @media (max-width: 768px) {
@@ -154,6 +332,98 @@
       .content, .photo {
         text-align: center;
       }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+      }
+      .education-flex {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 10px;
+      }
+      .education-left {
+        border-right: none;
+        border-bottom: 2px solid #e0e4ea;
+        padding-right: 0;
+        padding-bottom: 18px;
+        margin-bottom: 10px;
+        min-width: unset;
+        max-width: unset;
+      }
+      .education-right {
+        padding-left: 0;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .publications-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 30px;
+    }
+
+    .publications-section h3 {
+      font-size: 32px;
+      color: #1b4d3e;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .publications-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .publication-item {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .publication-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .publication-item h4 {
+      margin: 0 0 10px 0;
+      font-size: 20px;
+      color: #1b4d3e;
+    }
+
+    .publication-venue {
+      color: #398059;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      font-size: 16px;
+    }
+
+    .publication-authors {
+      color: #666;
+      margin: 0 0 12px 0;
+      font-size: 15px;
+    }
+
+    .publication-abstract {
+      color: #2c3e50;
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .publication-item {
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -161,7 +431,12 @@
   <div class="navbar">
     <div class="nav-content">
       <div class="nav-left">
-        <strong> </strong>
+        <div class="nav-links">
+          <a href="#education">Education</a>
+          <a href="#publications">Publications</a>
+          <a href="#skills">Skills & Tools</a>
+          <!-- <a href="#projects">Projects</a> -->
+        </div>
       </div>
       <div class="nav-right">
         <a href="https://github.com/chansrinivas" target="_blank">
@@ -194,27 +469,116 @@
     </div>
   </div>
 
-  <!-- <div class="bottom-section"> -->
-    <!-- <h3>Projects</h3> -->
-    <!-- <div class="item">
-      <h4>Credit Score Predictor</h4>
-      <p>Built an AI model using supervised learning and deployed using FastAPI to predict user credit scores and detect fraudulent transactions.</p>
+  <div class="education-section" id="education">
+    <h3>Education</h3>
+    <div class="education-flex">
+      <div class="education-left">
+        <span class="edu-icon"><img src="download.png" alt="USFCA Logo" style="width:44px;height:44px;object-fit:contain;display:block;"></span>
+        <div class="edu-info">
+          <span class="edu-univ">University of San Francisco</span>
+          <span class="edu-major">BS in Computer Science</span>
+          <span class="edu-years">2022 - 2025</span>
+        </div>
+      </div>
+      <div class="education-right">
+        <span class="edu-courses-title">Courses</span>
+        <div class="edu-courses-list">
+          Data Structures and Algorithms, Software Development, Computer Architecture, C and System Programming, Foundations of Machine Learning, Data Visualization, Operating Systems
+        </div>
+      </div>
     </div>
-    <div class="item">
-      <h4>User Behavior Simulation</h4>
-      <p>Simulated user transaction behavior and built AI models to analyze user patterns and generate actionable insights.</p>
-    </div> -->
+  </div>
 
-    <!-- <h3>Experience</h3> -->
-    <!-- <div class="item">
-      <h4>Software Engineer Intern - Quadcore Innovations</h4>
-      <p>Worked on developing intelligent systems for credit scoring and fraud detection, leveraging FastAPI, scikit-learn, and cloud deployment.</p>
+  <hr style="border: none; border-top: 2px solid #e0e4ea; margin: 60px auto 0 auto; max-width: 1000px;">
+  <div class="publications-section" id="publications">
+    <h3>Publications</h3>
+    <div class="publications-list">
+      <div class="publication-item">
+        <h4>An Inductive Approach for Identification of Barriers to PCP Literacy</h4>
+        <p class="publication-venue">Publisher: IEEE Computer Graphics and Applications</p>
+        <p class="publication-authors">Chandana Srinivas, Elif E. Firat, Robert S. Laramee, Alark Joshi</p>
+        <a href="https://ieeexplore.ieee.org/abstract/document/10747661" target="_blank" style="text-decoration:none;"><button style="background:#b71c1c;color:white;border:none;padding:8px 16px;border-radius:5px;margin-top:8px;cursor:pointer;"><i class="fas fa-file-pdf"></i> PDF</button></a>
+      </div>
+      <div class="publication-item">
+        <h4>Evaluating the Impact of a Constructivist Approach to Treemap Literacy</h4>
+        <p class="publication-venue">Publisher: IEEE Computer Graphics and Applications</p>
+        <p class="publication-authors">Elif E. Firat, Chandana Srinivas, Colm Lang, Bhumika Srinivas, Robert S. Laramee, Alark P. Joshi</p>
+        <a href="https://ieeexplore.ieee.org/abstract/document/10964422" target="_blank" style="text-decoration:none;"><button style="background:#b71c1c;color:white;border:none;padding:8px 16px;border-radius:5px;margin-top:8px;cursor:pointer;"><i class="fas fa-file-pdf"></i> PDF</button></a>
+      </div>
+      <div class="publication-item">
+        <h4>Evaluating the Recommendations of LLMs to Teach a Visualization Technique Using Bloom's Taxonomy</h4>
+        <p class="publication-venue">Publisher: Electronic Imaging, Society for Imaging Science and Technology</p>
+        <p class="publication-authors">Alark Joshi, Chandana Srinivas, Elif E. Firat, Robert S. Laramee</p>
+        <a href="https://doi.org/10.2352/EI.2024.36.1.VDA-360" target="_blank" style="text-decoration:none;"><button style="background:#b71c1c;color:white;border:none;padding:8px 16px;border-radius:5px;margin-top:8px;cursor:pointer;"><i class="fas fa-file-pdf"></i> PDF</button></a>
+      </div>
     </div>
-    <div class="item">
-      <h4>Research Assistant - Visualization Literacy Projects</h4>
-      <p>Contributed to IEEE VIS and Eurographics Education projects, enhancing user studies and designing visual data literacy tools.</p>
-    </div> -->
-  <!-- </div> -->
+  </div>
+
+  <hr style="border: none; border-top: 2px solid #e0e4ea; margin: 60px auto 0 auto; max-width: 1000px;">
+  <div class="skills-section" id="skills">
+    <h3>Skills & Tools</h3>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Go">
+        <span>Go</span>
+      </div>
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+        <span>Python</span>
+      </div>
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+        <span>Java</span>
+      </div>
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+        <span>JavaScript</span>
+      </div>
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+        <span>HTML</span>
+      </div>
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+        <span>CSS</span>
+      </div>
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+        <span>React</span>
+      </div>
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
+        <span>SQL</span>
+      </div>
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+        <span>Git</span>
+      </div>
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+        <span>MongoDB</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- <hr style="border: none; border-top: 2px solid #e0e4ea; margin: 60px auto 0 auto; max-width: 1000px;">
+  <div class="bottom-section" id="projects">
+    <h3>Projects</h3>
+    <div class="projects-grid">
+      <div class="project-box">
+        <h4>Credit Score Predictor</h4>
+        <p>Built an AI model using supervised learning and deployed using FastAPI to predict user credit scores and detect fraudulent transactions.</p>
+      </div>
+      <div class="project-box">
+        <h4>User Behavior Simulation</h4>
+        <p>Simulated user transaction behavior and built AI models to analyze user patterns and generate actionable insights.</p>
+      </div>
+      <div class="project-box">
+        <h4>Visualization Literacy Tools</h4>
+        <p>Developed interactive tools for data visualization literacy, contributing to IEEE VIS and Eurographics Education projects.</p>
+      </div>
+    </div>
+  </div> -->
 
 </body>
 </html>
